@@ -53,6 +53,9 @@ ul {
 
 .header {
   border-bottom: 1px solid var(--color-block);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-inner {
   display: flex;
@@ -100,11 +103,12 @@ ul {
 }
 .home {
   position: relative;
+  color: var(--color-put);
 }
 .home::after {
   position: absolute;
-  bottom: -5%;
-  right: 0;
+  bottom: -1px;
+  left: 0;
   content: '';
   width: 48px;
   height: 4px;
@@ -142,13 +146,11 @@ ul {
   flex-direction: column;
   align-items: center;
 
-  background-image: linear-gradient(
-      to bottom,
-      var(--color-tr-bg),
-      var(--color-tr-bg)
-    ),
-    url(../images/people-office.jpg);
-  background-position: 100%;
+  background-image:  linear-gradient(var(--color-tr-bg), 
+  var(--color-tr-bg)), 
+  url(../images/people-office.jpg);
+  
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -181,6 +183,7 @@ ul {
   min-width: 169px;
   height: 56px;
   margin: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -193,8 +196,8 @@ ul {
 
 .advantages-section {
   padding: 120px 0;
+  
 }
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -221,6 +224,8 @@ ul {
   border: 1px solid var(--color-light-slate);
   padding: 24px 100px;
   margin-bottom: 8px;
+  height: 112px;
+  border-radius: 4px; 
 }
 
 .advantages-subtitle {
@@ -297,9 +302,12 @@ ul {
   display: flex;
   width: 100%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  justify-content: center;
+  align-items: center;
 }
 
-.icon-item:hover {
+.icon-item:hover,
+.icon-item:focus {
   background-color: var(--color-put);
 }
 
@@ -385,8 +393,14 @@ ul {
 
 .footer-list {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
+
 }
+
+.footer-item {
+  margin-right: 120px;
+}
+
 .footer-logo {
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -397,6 +411,8 @@ ul {
   color: var(--color-brand);
   display: inline-block;
   margin-bottom: 16px;
+ 
+  
 }
 .footer-logo .accent {
   color: var(--color-cloud);
@@ -410,27 +426,37 @@ ul {
 
 .social-title {
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  color: var(--color-white);
 }
 
 .icon-social {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   justify-content: center;
 }
-
+.social-list {
+  width: 40px;
+  height: 40px;
+}
 .social-item {
   background-color: var(--color-brand);
   padding: 8px;
   border-radius: 50%;
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  fill: var(--color-cloud);
+  height: 100%;
+  
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.social-image {
+  fill: var(--color-cloud);
+}
 .social-item:hover {
   background-color: var(--color-footer);
 }
