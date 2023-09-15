@@ -345,6 +345,7 @@ ul {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    transform: translateY(0%);
 }
 
 .portfolio-image {
@@ -363,7 +364,7 @@ ul {
   line-height: 1.5;
 }
 
-.portfolio:hover .portfolio-overlay {
+.portfolio-item:hover .portfolio-overlay {
   transform: translateY(0);
 }
 
@@ -456,6 +457,7 @@ ul {
 .social-image {
   fill: var(--color-cloud);
 }
-.social-item:hover {
+.social-item:hover,
+.social-item:focus {
   background-color: var(--color-footer);
 }
